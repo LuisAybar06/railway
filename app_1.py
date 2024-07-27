@@ -12,9 +12,9 @@ app = FastAPI()
 def read_root():
     return {"message": "Hello"}
 
-# @app.get("/health")
-# def health_check():
-#     return {"status": "healthy"}
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
 
 
 @app.post("/predict")
